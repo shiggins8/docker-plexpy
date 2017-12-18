@@ -14,8 +14,6 @@ The [LinuxServer.io][linuxserverurl] team and Scott Higgins bring you another co
 # shiggins8/plexpy
 [Tautulli][appurl] Is a Python-based Plex Usage tracker, that is currently in active development.
 
-[![tautulli](https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/plexpy-banner.png)][appurl]
-
 ## Usage
 
 ```
