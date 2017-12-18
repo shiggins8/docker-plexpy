@@ -5,31 +5,28 @@
 [appurl]: https://github.com/JonnyWong16/plexpy
 [hub]: https://hub.docker.com/r/linuxserver/plexpy/
 
-[![linuxserver.io](https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/linuxserver_medium.png)][linuxserverurl]
-
-The [LinuxServer.io][linuxserverurl] team brings you another container release featuring easy user mapping and community support. Find us for support at:
+The [LinuxServer.io][linuxserverurl] team and Scott Higgins bring you another container release featuring easy user mapping and community support. Find us for support at:
 * [forum.linuxserver.io][forumurl]
 * [IRC][ircurl] on freenode at `#linuxserver.io`
 * [Podcast][podcasturl] covers everything to do with getting the most from your Linux Server plus a focus on all things Docker and containerisation!
+* Note: I am utilizing almost all of their setup with a minor tweak to create this image. All props go to them, I'm just standing on the shoulders of giants.
 
-# linuxserver/plexpy
-[![](https://images.microbadger.com/badges/version/linuxserver/plexpy.svg)](https://microbadger.com/images/linuxserver/plexpy "Get your own version badge on microbadger.com")[![](https://images.microbadger.com/badges/image/linuxserver/plexpy.svg)](https://microbadger.com/images/linuxserver/plexpy "Get your own image badge on microbadger.com")[![Docker Pulls](https://img.shields.io/docker/pulls/linuxserver/plexpy.svg)][hub][![Docker Stars](https://img.shields.io/docker/stars/linuxserver/plexpy.svg)][hub][![Build Status](https://ci.linuxserver.io/buildStatus/icon?job=Docker-Builders/x86-64/x86-64-plexpy)](https://ci.linuxserver.io/job/Docker-Builders/job/x86-64/job/x86-64-plexpy/)
+# shiggins8/plexpy
+[Tautulli][appurl] Is a Python-based Plex Usage tracker, that is currently in active development.
 
-[Plexpy][appurl] Is a Python-based Plex Usage tracker, that is currently in active development.
-
-[![plexpy](https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/plexpy-banner.png)][appurl]
+[![tautulli](https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/plexpy-banner.png)][appurl]
 
 ## Usage
 
 ```
 docker create \ 
-  --name=plexpy \
+  --name=tautulli \
   -v <path to data>:/config \
   -v <path to plexlogs>:/logs:ro \
   -e PGID=<gid> -e PUID=<uid>  \
   -e TZ=<timezone> \
   -p 8181:8181 \
-  linuxserver/plexpy
+  shiggins8/tautulli
 ```
 
 ## Parameters
@@ -65,25 +62,4 @@ Access the webui at `<your-ip>:8181`, for more information check out [Plexpy][ap
 
 ## Info
 
-* To monitor the logs of the container in realtime `docker logs -f plexpy`.
-
-* container version number 
-
-`docker inspect -f '{{ index .Config.Labels "build_version" }}' plexpy`
-
-* image version number
-
-`docker inspect -f '{{ index .Config.Labels "build_version" }}' linuxserver/plexpy`
-
-## Versions
-
-+ **12.12.17:** Rebase to alpine 3.7.
-+ **21.07.17:** Internal git pull instead of at runtime.
-+ **12.07.17:** Add inspect commands to README, move to jenkins build and push.
-+ **25.05.17:** Rebase to alpine 3.6.
-+ **20.04.17:** Add pycryptodomex pip package.
-+ **07.02.17:** Rebase to alpine 3.5.
-+ **09.09.16:** Add layer badges to README.
-+ **27.08.16:** Add badges to README.
-+ **08.08.16:** Rebase to alpine linux.
-+ **16.07.15:** Inital Release.
+* To monitor the logs of the container in realtime `docker logs -f tautulli`.
