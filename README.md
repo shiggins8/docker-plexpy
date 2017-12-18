@@ -11,7 +11,7 @@ The [LinuxServer.io][linuxserverurl] team and Scott Higgins bring you another co
 * [Podcast][podcasturl] covers everything to do with getting the most from your Linux Server plus a focus on all things Docker and containerisation!
 * Note: I am utilizing almost all of their setup with a minor tweak to create this image. All props go to them, I'm just standing on the shoulders of giants.
 
-# shiggins8/plexpy
+# shiggins8/tautulli
 [Tautulli][appurl] Is a Python-based Plex Usage tracker, that is currently in active development.
 
 ## Usage
