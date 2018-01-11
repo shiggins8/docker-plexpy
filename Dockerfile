@@ -26,3 +26,5 @@ COPY root/ /
 # ports and volumes
 VOLUME /config /logs
 EXPOSE 8181
+
+HEALTHCHECK CMD curl --fail http://localhost:8181/ || exit 1
