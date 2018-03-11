@@ -13,7 +13,7 @@ RUN \
  pip install --no-cache-dir -U \
 	pycryptodomex && \
  echo "**** install app ****" && \
- git clone -b beta --depth 1 https://github.com/Tautulli/Tautulli /app/tautulli && \
+ git clone --depth 1 https://github.com/Tautulli/Tautulli /app/tautulli && \
  echo "**** cleanup ****" && \
  apk del --purge \
 	build-dependencies && \
